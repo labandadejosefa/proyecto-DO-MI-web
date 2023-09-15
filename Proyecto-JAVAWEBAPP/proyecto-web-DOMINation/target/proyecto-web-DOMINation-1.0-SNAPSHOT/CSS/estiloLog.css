@@ -1,0 +1,34 @@
+body{
+    background-image: url("../img/login.jpg");
+    background-color: rgb(49, 49, 48);
+    font-family: Verdana;
+    height: 500px;
+    margin: 30px;
+    background-size: 1100px;
+}
+.domiTit{
+    background-color: rgba(133, 10, 10,0.8);
+    padding: 10px;
+    color: rgb(158, 153, 153);
+}
+
+.fuenteMin{
+    background-color:  rgba(28, 28, 28,0.8);
+    color: rgb(158, 153, 153);
+    font-style: bold;
+    padding: 5px;
+}
+
+.fuentePrinc{
+    background-color:  rgba(28, 28, 28,0.8);
+    border: 2px solid rgb(158, 153, 153);
+    padding: 10px;
+    color: rgb(158, 153, 153);
+    margin: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.centrarEnPag{
+    text-align: center;
+}
