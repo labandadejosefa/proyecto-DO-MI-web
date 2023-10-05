@@ -1,12 +1,9 @@
-/*body {
-    background-image: url("../../static/photos/static/photos/making-magic-with-fairy-lights.jpg") !important;
-    background-size: cover !important; 
-    background-repeat: no-repeat;
-}*/
-
 .background-image {
     background-image: url("../../static/photos/making-magic-with-fairy-lights.jpg") !important;
     background-size: cover !important; 
     background-repeat: no-repeat !important;
 }
 
+.background-signUp{
+    background-color: black;
+}

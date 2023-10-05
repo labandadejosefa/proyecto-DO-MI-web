@@ -14,8 +14,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Registro de usuario</title>
     <!-- CSS files -->
-    <link href="./dist/css/tabler.min.css?1692870487" rel="stylesheet"/>
-    
+    <link href="./dist/css/tabler.min.css" rel="stylesheet"/>
+    <link href="./dist/css/sign-in-up-link.css" rel="stylesheet"/> <!--*******ESTABA MAL LA RUTA LA CONCHA DE LA LORA*********-->
     <style>
       @import url('https://rsms.me/inter/inter.css');
       :root {
@@ -27,14 +27,14 @@
     </style>
   </head>
   <body class="d-flex flex-column">
-    <script src="./dist/js/demo-theme.min.js?1692870487"></script>
-    <div class="page page-center">
+    <script src="./dist/js/demo-theme.min.js"></script>
+    <div class="page page-center background-signUp"> <!--ESTOY PROBANDO COMO QUEDARIA FOTO FONDO EN CREAR CUENTAAAAAAAA  agregar en class background-image*************************-->
         <div class="container container-tight py-4">
 
             <style>
                 /* Estilo para hacer más ancho el contenedor */
                 .container-tight {
-                    max-width: 1200px;
+                    max-width: 800px;
                     /* Ajusta este valor según lo ancho que lo desees */
                 }
             
@@ -46,52 +46,69 @@
 
             <div class="text-center mb-4">
                 <a href="." class="navbar-brand navbar-brand-autodark">
-                    <img src="./static/logo.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+                    <img src="./static/logo-transparent-orange.png" width="110" height="32" alt="Domination" class="navbar-brand-image">
                 </a>
             </div>
             <form class="card card-md" action="./" method="get" autocomplete="off" novalidate> <!--*****CUIDADO!!! VINO CON GET, HAY QUE CAMBIAR A POST-->
                 <div class="card-body">
                     <h2 class="card-title text-center mb-5">Crear cuenta</h2>
 
-                    <!-- Contenedor principal que tendrá las dos columnas -->
+                    <!-- Contenedor principal que contiene las dos columnas -->
                     <div class="d-flex flex-wrap justify-content-between">
-
                         <!-- Primera columna -->
-                        <div style="flex: 1; padding-right: 10px;">
-                            <div class="mb-3">
-                                <label class="form-label">Name</label>
-                                <input type="text" class="form-control" placeholder="Enter name">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Room address</label>
-                                <input type="text" class="form-control" placeholder="address sala">
-                            </div>
-                        </div>
-
-                        <!-- Segunda columna -->
-                        <div style="flex: 1; padding-left: 10px;">
-                            <div class="mb-3">
-                                <label class="form-label">Email address</label>
-                                <input type="email" class="form-control" placeholder="Enter email">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Password</label>
-                                <div class="input-group input-group-flat">
-                                    <input type="password" class="form-control" placeholder="Password" autocomplete="off">
-                                    <span class="input-group-text">
-                                        <a href="#" class="link-secondary" title="Show password" data-bs-toggle="tooltip">
-                                            <!-- SVG icon 'ojito de visibilidad de password' -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
-                                            </svg>
-                                        </a>
-                                    </span>
+                        <div class="row">                    
+                            <div class="col-md-6"> <!-- Esta columna toma el 50% del espacio en pantallas medianas y grandes -->                    
+                                <!-- Nombre y Apellido -->
+                                <div class="row">
+                                    <div class="col-md-6 mb-3"> <!-- 50% del espacio de su contenedor -->
+                                        <label class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" placeholder="Enter name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3"> <!-- 50% del espacio de su contenedor -->
+                                        <label class="form-label">Apellido</label>
+                                        <input type="text" class="form-control" placeholder="Enter surname" required>
+                                    </div>
                                 </div>
+                    
+                                <div class="mb-3">
+                                    <label class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" placeholder="ej: usuario@mail.com" required>
+                                </div>
+
+                                <div class="col-md-12 mb-3"> <!-- Primera columna de la fila -->
+                                    <label class="form-label">Teléfono</label>
+                                    <input type="tel" class="form-control" placeholder="(cód área) número sin 15" pattern="^\(\d{3}\) \d{8}$" maxlength="10" required>
+                                </div>
+                    
                             </div>
-                        </div>
-                    </div>
+                    
+                            <!-- Segunda columna -->
+                            <div class="col-md-6"> <!-- Esta columna tomará el 50% del espacio en pantallas medianas y grandes -->                                                    
+                                <!-- Fecha de Nacimiento -->
+                                <div class="mb-3">
+                                    <label class="form-label">Fecha de Nacimiento</label>
+                                    <input type="date" class="form-control" id ="birthday" min="1943-01-01" max="2003-11-01" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label> <!--HAY QUE VALIDAR LOS CAMPOS DEL LADO DEL SERVER!!!!!!-->
+                                    <div class="input-group input-group-flat">
+                                        <input type="password" class="form-control" placeholder="Password" autocomplete="off" minlength="8" maxlength="20" required>
+                                        <span class="input-group-text">
+                                            <a href="#" class="link-secondary" title="Show password" data-bs-toggle="tooltip">
+                                                <!-- SVG icon -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                                    <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                                </svg>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>                    
+                            </div>                                                
+                        </div><!-- ACÁ TERMINA LA CLASE ROW DEL CONTENEDOR********************************************************-->
+                    </div> <!-- ACÁ TERMINA EL CONTENEDOR********************************************************-->
 
                     <div class="mb-3">
                         <label class="form-check">
@@ -99,6 +116,26 @@
                             <span class="form-check-label">Agree to the <a href="./terms-of-service.html" tabindex="-1">terms and policy</a>.</span>
                         </label>
                     </div>
+                
+
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <div class="input-group input-group-flat">
+                            <input type="password" class="form-control" placeholder="Password" autocomplete="off">
+                            <span class="input-group-text">
+                                <a href="#" class="link-secondary" title="Show password" data-bs-toggle="tooltip">
+                                    <!-- SVG icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                        <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                
+
                     <!--
                     <div class="form-footer">
                         <button type="submit" class="btn btn-primary w-100">Create new account</button>
@@ -111,15 +148,15 @@
                 <button type="submit" class="btn btn-primary w-70">Crear cuenta</button>
             </div>
 
-            <div class="text-center text-secondary mt-3 mb-3">
+            <div class="text-center text-primary mt-3 mb-3">
                 Already have an account? <a href="./sign-in-cover.html" tabindex="-1">Sign in</a>
             </div>
         </div>
     </div>
     <!-- Libs JS -->
     <!-- Tabler Core -->
-    <script src="./dist/js/tabler.min.js?1692870487" defer></script>
-    <script src="./dist/js/demo.min.js?1692870487" defer></script>
+    <script src="./dist/js/tabler.min.js" defer></script>
+    <script src="./dist/js/demo.min.js" defer></script>
 </body>
 
 </html>
