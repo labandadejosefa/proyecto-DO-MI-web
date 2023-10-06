@@ -5,5 +5,10 @@
 }
 
 .background-signUp{
-    background-color: black;
+    /*background-color: black;*/
+    background-color: #242424;
+}
+
+.haveAccount{
+    font-size: larger;
 }
