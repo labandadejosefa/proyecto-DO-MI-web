@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Confirmación de correo</title>
     <!--CSS files -->
-    <link href="./dist/css/tabler.min.css?1692870487" rel="stylesheet"/>    
+    <link href="./dist/css/tabler.min.css" rel="stylesheet"/>    
     <link href="./dist/css/sign-in-up-link.css" rel="stylesheet"/> <!--*******ESTABA MAL LA RUTA LA CONCHA DE LA LORA*********-->
     <style>
       @import url('https://rsms.me/inter/inter.css');
@@ -27,18 +27,42 @@
     </style>
   </head>
   <body  class=" d-flex flex-column">
-    <script src="./dist/js/demo-theme.min.js?1692870487"></script>
+    <script src="./dist/js/demo-theme.min.js"></script>
     <div class="page page-center background-image">
       <div class="container container-tight py-4">
-        <div class="text-center mb-4">
+        <div class="text-center mb-7">
           <a href="." class="navbar-brand navbar-brand-autodark">
-            <img src="./static/logo-no-background.svg" width="110" height="62" alt="Domination" class="navbar-brand-image">
+            <img src="./static/logo-no-background1.svg" width="130" height="72" alt="Domination"  class="navbar-brand-image">
           </a>
         </div>
-        <div class="text-center">
+        
+        <div class="card card-sm custom-fontsize custom-bgcolor">
+          <div class="card-body text-center">
+            <div class="mb-6">
+              <h1 class="card-title custom-fontsize">Bienvenid@</h1>
+              <p class="text-secondary">nombre de usuario</p>
+            </div>
+            <div class="mb-4">
+              <span class="avatar avatar-xl mb-3" style="background-image: url(./static/photos/user-ok_transparent.svg)"></span>              
+            </div>
+            <div class="mb-4">
+              <!--<input type="password" class="form-control" placeholder="Password&hellip;">-->
+              <p class="text-secondary">Tu cuenta se creó exitosamente</p>
+            </div>
+            <div>
+              <a href="#" class="btn btn-primary w-80">
+                <!--Download SVG icon from http://tabler-icons.io/i/lock-open-->
+                <!--<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 11m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" /><path d="M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M8 11v-5a4 4 0 0 1 8 0" /></svg>-->
+                Reservá una sala
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!--<div class="text-center">
           <div class="my-5">
-            <h2 class="h1">Revisa tu correo</h2>
-            <p class="fs-h3 text-secondary">
+            <h2 class="custom-fontsize">Bienvenid@</h2>
+            <p class="fs-h2 text-secondary">
               Hemos enviado un email a <strong>support@tabler.io</strong>.<br />
               Haz click en el enlace recibido para confirmar tu dirección de correo electrónico.
             </p>
@@ -47,14 +71,12 @@
             Si no puedes ver el correo, por favor revisa tu correo spam.<br />
             ¿Dirección de correo errónea? <a href="#">Reingresa tu correo electrónico</a>.
           </div>
-        </div>        
+        </div>-->       
       </div>
-      <!-- Photo ***** ACÁ METÍ UNA FOTO PERO ES IMPOSIBLE PONERLA COMO FONDO (cubre la parte inferior de la página)-->
-      <!--<div class="bg-cover h-100 min-vh-50" style="background-image: url(./static/photos/a-woman-works-on-a-laptop-at-home-2.jpg)"></div>-->
     </div>
     <!-- Libs JS -->
     <!-- Tabler Core -->
-    <script src="./dist/js/tabler.min.js?1692870487" defer></script>
-    <script src="./dist/js/demo.min.js?1692870487" defer></script>
+    <!--<script src="./dist/js/tabler.min.js" defer></script>
+    <script src="./dist/js/demo.min.js" defer></script>-->
   </body>
 </html>

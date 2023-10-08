@@ -1,5 +1,5 @@
 .background-image {
-    background-image: url("../../static/photos/making-magic-with-fairy-lights.jpg") !important;
+    background-image: url("../../static/photos/drums-bgcontgrats.jpeg") !important;
     background-size: cover !important; 
     background-repeat: no-repeat !important;
 }
@@ -11,4 +11,18 @@
 
 .haveAccount{
     font-size: larger;
+}
+
+/*card Pag felicitación*/
+.custom-fontsize{
+    font-size: 140%;
+}
+
+.custom-bgcolor{
+    background-color: #fdf7ed;
+}
+
+.brand-size{
+    max-width: 50%;
+    height: auto;
 }
